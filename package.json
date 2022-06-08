@@ -1,0 +1,23 @@
+{
+  "name": "node-nodejs-file_manager",
+  "version": "1.0.0",
+  "description": "This repository is the part of nodejs-assignments https://github.com/",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "bobrysh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/"
+  },
+  "homepage": "https://github.com/"
+}
