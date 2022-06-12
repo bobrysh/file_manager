@@ -1,1 +1,1 @@
-console.log("script here")
+console.warn("script here")

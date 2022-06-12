@@ -1,46 +1,56 @@
 export const inputConstants = [
     {
-        name: "os",
-        payload: "<os> <--homedir>",
+        input: "os",
+        error: "os --homedir",
     },
     {
-        name: "cd",
-        payload: "<cd> <path_to_directory>",
+        input: "cd",
+        error: "Input need to be like this: cd `directory_path`",
     },
     {
-        name: "cat",
-        payload: "<cat> <path_to_file>",
+        input: "add",
+        error: "Input need to be like this: add `new_filename`",
     },
     {
-        name: "add",
-        payload: "<add> <new_filename>",
+        input: "mv",
+        error: "Input need to be like this: mv `file_path` `new_file_path`",
     },
     {
-        name: "rn",
-        payload: "<rn> <path_to_file> <new_filename>",
+        input: "compress",
+        error: "Input need to be like this: compress `file_path` `destination_path`",
     },
     {
-        name: "cp",
-        payload: "<cp> <path_to_file> <new_filename>",
+        input: "rn",
+        error: "Input need to be like this: rn `file_path` `new_filename`",
     },
     {
-        name: "mv",
-        payload: "<mv> <path_to_file> <path_to_new_file_directory>",
+        input: "cat",
+        error: "Input need to be like this: cat `file_path`",
     },
     {
-        name: "rm",
-        payload: "<rm> <path_to_file>",
+        input: "cp",
+        error: "Input need to be like this: cp `file_path` `new_filename`",
+    },
+
+    {
+        input: "decompress",
+        error: "Input need to be like this: decompress `file_path` `destination_path`",
     },
     {
-        name: "hash",
-        payload: "<hash> <path_to_file>",
+        input: "rm",
+        error: "Input need to be like this: rm `file_path`",
     },
     {
-        name: "compress",
-        payload: "<compress> <path_to_file> <path_to_destination>",
+        input: "hash",
+        error: "Input need to be like this: hash `file_path`",
     },
-    {
-        name: "decompress",
-        payload: "<decompress> <path_to_file> <path_to_destination>",
-    },
+
 ];
+
+export const enterCommandLog = `Please enter a command. Type "exit" to quit \n`;
+
+export const finishLog = `The program is finished. The end.\n`;
+
+export const username = "Username"
+
+export const errorText = "\nError: Invalid input"

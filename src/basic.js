@@ -1,25 +1,27 @@
 import { ShowErrorMessage } from "./showErrorMessage.js";
+import { enterCommandLog } from "./inputConstants.js";
 
 export class Basic extends ShowErrorMessage {
   enterCommandLog() {
-    console.log(`Please enter a command. Type "exit" to quit \n`);
+    console.warn(enterCommandLog);
   }
   showCurrentPath(path) {
-    console.log(`You are currently in ${path}`);
+    console.warn(`You are currently in ${path}`);
+  }
+  showFailedOutput(currentDirectory) {
+    this.executionFailed();
+    this.showCurrentCommandLine(currentDirectory);
   }
   showCurrentCommandLine(path) {
     process.stdout.write(`CLI ${path}> `);
   }
-  showBasicOutput(currentDir) {
-    console.log("\n");
-    this.showCurrentCommandLine(currentDir);
-  }
-  showErrorOutput(currentDir, command = "") {
+  showErrorOutput(currentDirectory, command = "") {
     this.wrongInput(command);
-    this.showCurrentCommandLine(currentDir);
+    this.showCurrentCommandLine(currentDirectory);
   }
-  showFailedOutput(currentDir) {
-    this.executionFailed();
-    this.showCurrentCommandLine(currentDir);
+  showBasicOutput(currentDirectory) {
+    console.warn("\n");
+    this.showCurrentCommandLine(currentDirectory);
   }
+
 }
